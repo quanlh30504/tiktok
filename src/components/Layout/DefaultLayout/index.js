@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import Sidebar from './Sidebar';
 
 import styles from './DefaultLayout.moule.scss'
 
@@ -9,11 +9,11 @@ const cx = classNames.bind(styles)
 
 function DefaultLayout({ children }) {
     return (  
-        <div className='wrapper'>
+        <div className={cx('wrapper')}>
            <Header />
-           <div className='container'>
+           <div className={cx('container')}>
             <Sidebar />
-            <div className='content'>{ children }</div>
+            <div className={cx('content')}>{ children }</div>
            </div>
         </div>
     );
